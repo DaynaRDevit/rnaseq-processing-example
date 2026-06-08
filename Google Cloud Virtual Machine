@@ -1,0 +1,20 @@
+Running RNA.seq datasets requires a large amount of memory. Therefore, I created and worked through a Google Cloud console virtual machine (VM).
+Only four datasets were used for this work. 
+Two of them correspond to ASD samples, and two correspond to "Normal"/ control samples. 
+
+  # Steps to create your own VM using Google Cloud.
+1. Go to cloud.google.com
+at the top right corner, click on "console"
+2. At the top left corner, click on the options tab
+It'll display several options; look for "Compute engine"
+3. Click on VM instances
+4. Create an instance.
+5. Add a machine configuration name.
+6. Choose a machine option. I chose C3D: Consistently high performance
+7. in machine type I chose e2-highmem-2(2vCPU,1core,16GBmemory)
+8. IN OS and storage: change the size GB from 10 to 100
+9. Create, and it is ready to use
+
+If you are new to Google Cloud, currently (June 8 2026) 
+Google has a promotion where they'll give you $300 in free credit. I used this credit to run the RNA-seq data. 
+However, every time you use the VM, you'll be charged either from the available credit or from your credit card.
