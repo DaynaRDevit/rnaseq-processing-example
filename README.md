@@ -11,10 +11,10 @@ This work was performed using:
 ## Workflow
 
 1. Quality control with FastQC
-   # This step was used to do a first inspection of the datasets downloaded from public databases
+   This step was used to do a first inspection of the datasets downloaded from public databases
 2. Quality control using Fastp
-   # Fastp performs its own quality control
-   # Report check: Fastp retrieves a post-QC report.
+    Fastp performs its own quality control
+   Report check: Fastp retrieves a post-QC report.
 5. Download of the reference genome
 6. Index of reference genome
 7. Alignment of reference genome
