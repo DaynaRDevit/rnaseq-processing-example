@@ -27,13 +27,13 @@ This work was performed using:
 
 | Software | Version |
 |-----------|---------|
-| FastQC v0.12.1
-| fastp 0.23.4
-| bwa 0.7.17-r1188
-| featureCounts v2.0.6
-| cufflinks v2.2.1
-| stringtie v2.2.1
-| R | 4.4.1 |
+| FastQC | 0.12.1
+| fastp | 0.23.4
+| bwa | 0.7.17-r1188
+| featureCounts | 2.0.6
+| cufflinks | 2.2.1
+| stringtie | 2.2.1
+| R | 4.6.0 |
 | DESeq2 | 1.46.0 |
 
 ## Directory Structure
@@ -46,7 +46,7 @@ figures/
 
 ## Input Data
 
-The workflow was tested using publicly available RNA-seq data from [source].
+The workflow was tested using publicly available RNA-seq data from [[source](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP667693&o=acc_s%3Aa)].
 
 ## How to Run
 
@@ -58,8 +58,8 @@ bash scripts/03_alignment.sh
 
 ## Output
 
-The pipeline produces:
-
+The pipeline produces
+- Download of datasets
 - Quality control reports
 - BAM alignment files
 - Gene count matrix
