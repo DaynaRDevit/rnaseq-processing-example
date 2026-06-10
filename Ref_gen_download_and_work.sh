@@ -20,6 +20,22 @@ mv GCF_000001405.40_GRCh38.p14_genomic.fna hsa_fasta.fna
  mv hsa_fasta.fna ../../../../
  mv genomic.gtf ../../../../
 
+ #Index reference genome
+ bwa index hsa_fasta.fna
+ 
+#Alignment
+bwa mem Homo_sapiens.fna SRR36999760_1.fastq.gz SRR36999760_2.fastq.gz > aligned760.bam
+bwa mem Homo_sapiens.fna SRR36999779_1.fastq.gz SRR36999779_2.fastq.gz > aligned779.bam
+
+#Sort the aligned bam files
+samtools sort aligned760.bam -o sortedaligned760.bam
+samtools sort aligned779.bam -o sortedaligned779.bam
+
+#Index the sorted aligned file
+samtools index sortedaligned760.bam
+samtools index sortedaligned779.bam
+
+
 
 
 
