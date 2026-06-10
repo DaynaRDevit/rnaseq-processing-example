@@ -1,0 +1,15 @@
+#!bin/bash
+fastqc SRR36999767_1.fastq.gz
+fastqc SRR36999767_2.fastq.gz
+fastqc SRR36999760_1.fastq.gz
+fastqc SRR36999760_2.fastq.gz
+fastqc SRR36999779_1.fastq.gz
+fastqc SRR36999779_2.fastq.gz
+fastqc SRR36999782_1.fastq.gz
+fastqc SRR36999782_2.fastq.gz
+#The docs showed the sequences were already trimmed and had already been through a QC process.
+# fastp was not used. If your sequences need further QC use
+# fastp SRR36999767_1.fastq.gz
+# fastp SRR36999767_2.fastq.gz
+# with all the sequences individually.
+
