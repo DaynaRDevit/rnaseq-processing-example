@@ -19,6 +19,9 @@ mv GCF_000001405.40_GRCh38.p14_genomic.fna hsa_fasta.fna
 # Move the files to the working folder for their use (you can put the working directory instead of the "../"
  mv hsa_fasta.fna ../../../../
  mv genomic.gtf ../../../../
+ cd ../../../../
+ chmod a+rwx hsa_fasta.fna
+ chmod a+rwx genomic.gtf
 
 
 
