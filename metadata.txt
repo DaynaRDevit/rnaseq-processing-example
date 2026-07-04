@@ -1,0 +1,6 @@
+id	type
+SRR36999767	Control
+SRR36999760	Control
+SRR36999782	Disease
+SRR36999779	Disease
+
