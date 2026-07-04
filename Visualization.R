@@ -1,6 +1,46 @@
 library(ggplot2)
+library(pheatmap)
+library(ggplot2)
 library(ggrepel)
 library(dplyr)
+library(DESeq2)
+# MA plot- save
+
+png(file="yourpath/MAplot.png")
+MAplot <- plotMA(res, ylim = c(-5, 5))
+dev.off()
+
+# PCA plot
+png(file="~/Documents/TDvsASD/DifExpress/PCAplot.png")
+vsd <- vst(dds, blind = FALSE)
+plotPCA(vsd, intgroup = "type")
+dev.off()
+
+
+
+# Variance stabilizing transformation
+vsd <- vst(dds, blind = FALSE)
+
+# Select top 20 significant genes
+topgenes <- head(order(res$padj), 20)
+
+# Heatmap
+library(pheatmap)
+pheatmap(assay(vsd)[topgenes, ],
+         cluster_rows = TRUE,
+         cluster_cols = TRUE,
+         annotation_col = metadata,
+         show_rownames = TRUE,
+         fontsize_row = 8,
+         main = "Top 20 Differentially Expressed Genes")
+plotPCA(vsd, intgroup = "type")
+plotMA(res, ylim = c(-5, 5))
+plotDispEsts(dds)
+sampleDists <- dist(t(assay(vsd)))
+pheatmap(as.matrix(sampleDists), clustering_distance_rows = sampleDists,
+         clustering_distance_cols = sampleDists,
+         main = "Sample-to-Sample Distances")
+
 
 # Convert DESeqResults to data frame
 res_df <- as.data.frame(res)
