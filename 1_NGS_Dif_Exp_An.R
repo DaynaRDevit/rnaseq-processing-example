@@ -15,6 +15,7 @@ metadata$type <- factor(metadata$type)
 dds <- DESeqDataSetFromMatrix(countData = ASDvsTD,
                               colData = metadata,
                               design = ~ type)  # replace 'condition' with your variable
+# It should say "true" 
 
 dds <- DESeq(dds)
 res <- results(dds)
