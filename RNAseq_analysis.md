@@ -353,7 +353,7 @@ dev.off()
 
 **Experimental groups inspection**
 
-![](counts/plotMA.png)
+![](figures/plotMA.png)
 
 This plot shows how gene expression changes relate to average expression levels.
 
@@ -369,7 +369,7 @@ plotPCA(vsd, intgroup = "type")
 dev.off()
 ```
 
-![](counts/PCA.png)
+![](figures/PCA.png)
 
 Principal Component Analysis (PCA) reduces the whole expression data into a few principal components that explain most of the variation between samples. **PC1 (53%)** explains the largest source of variation. **PC2 (34%)** explains the second largest source of variation.
 
@@ -389,7 +389,7 @@ vsd <- vst(dds, blind = FALSE)
 plotDispEsts(dds)
 ```
 
-![](counts/Dispersion%20St.png)
+![](figures/Dispersion%20St.png)
 
 This plot shows gene-to-gene variability (dispersion) changes with expression level. In the graph it is shown that dispersion decreases as expression increases. The blue points follow the fitted trend. The blue points above the red curve may represent higher biological variability than expected suggesting genuinely variable genes.
 
@@ -404,7 +404,7 @@ pheatmap(as.matrix(sampleDists), clustering_distance_rows = sampleDists,
          main = "Sample-to-Sample Distances")
 ```
 
-![](counts/sampledistance.png)
+![](figures/sampledistance.png)
 
 The heatmap shows
 
@@ -476,7 +476,7 @@ ggplot(res_df,
   )
 ```
 
-![](counts/VolcanoPLot.png)
+![](figures/VolcanoPLot.png)
 
 This plot is showing the significant genes, upregulated and downregulated. The gray points show the not significant. The names of the five genes with highest significance are depicted. However, pathway-level conclusions should be interpreted with appropriate caution due to the **limited** number of biological replicates.
 
@@ -504,7 +504,7 @@ pheatmap(as.matrix(sampleDists), clustering_distance_rows = sampleDists,
          main = "Sample-to-Sample Distances")
 ```
 
-![](counts/20difExprge.png)
+![](figures/20difExprge.png)
 
 This graph depicts how disease replicate 1 and 2 look very similar. At the same time, the control replicates 1 and 2 are also close between them. There are no obvious outlier samples.
 
@@ -561,7 +561,7 @@ dotplot(ego, showCategory =20, color = "pvalue")
 
 **Gene Ontology Biological Process**
 
-![](counts/ALLgensGO.png)
+![](figures/ALLgensGO.png)
 
 The results show closely related GO terms describing many immune-associated genes consistent with: lymphocyte mediated immunity and regulation of cytotoxic immune responses, NK-cell biology, immune receptor signaling,antigen presentation.
 
@@ -584,7 +584,7 @@ gene = entrez_genes,
 dotplot(go_enrich_CC, showCategory =20, color = "pvalue")
 ```
 
-![](counts/GO_CC_allgenes.png)
+![](figures/GO_CC_allgenes.png)
 
 Many differentially expressed genes encode proteins often involved in: cell-cell communication, receptor signaling, immune recognition, and interactions with the extracellular environment.
 
@@ -609,9 +609,9 @@ go_enrich_MF <- pairwise_termsim(go_enrich_MF)
 emapplot(go_enrich_MF, showCategory = 20)
 ```
 
-![](counts/MF_ALlgenes.png)
+![](figures/MF_ALlgenes.png)
 
-![](counts/KMAP.png)The two strongest enriched terms are enzymes that cleave carbohydrate-containing molecules. Connecting this details with the previous finding, the immune cells— neutrophils and macrophages—contain many hydrolases in their granules. These enzymes are released during immune responses and are involved in degrading pathogens and remodeling extracellular material.
+![](figures/KMAP.png)The two strongest enriched terms are enzymes that cleave carbohydrate-containing molecules. Connecting this details with the previous finding, the immune cells— neutrophils and macrophages—contain many hydrolases in their granules. These enzymes are released during immune responses and are involved in degrading pathogens and remodeling extracellular material.
 
 **KEGG Analysis**
 
@@ -627,7 +627,7 @@ barplot(kegg_enrich, showCategory = 20)
 
 ```
 
-**KEGG pathway enrichment** ![](counts/kENRICH_ALLgeenes.png)
+**KEGG pathway enrichment** ![](figures/KEGG.png)
 
 These pathways all include genes encoding structural and contractile proteins,all immune-related pathways share many immune genes, particularly those involved in antigen presentation. Enzymes involved in carbohydrate metabolism and glycosidic bond cleavage. putative enriched biological themes rather than definitive disease mechanisms.
 
