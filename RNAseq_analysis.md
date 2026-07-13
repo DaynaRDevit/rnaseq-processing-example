@@ -561,7 +561,7 @@ dotplot(ego, showCategory =20, color = "pvalue")
 
 **Gene Ontology Biological Process**
 
-![](figures/ALLgensGO.png)
+![](figures/GO_ALl.png)
 
 The results show closely related GO terms describing many immune-associated genes consistent with: lymphocyte mediated immunity and regulation of cytotoxic immune responses, NK-cell biology, immune receptor signaling,antigen presentation.
 
